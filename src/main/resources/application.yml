@@ -1,6 +1,14 @@
 server:
   port: ${SPRING_PORT}
 
+grpc:
+  client:
+    keumbang-auth:
+      address: ${GRPC_AUTH_SERVER_ADDRESS}
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext # 운영 환경에서는 TLS를 사용하여 보안 통신을 설정
+
 spring:
   application:
     name: keumbang-resource
