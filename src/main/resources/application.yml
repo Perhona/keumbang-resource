@@ -29,6 +29,10 @@ spring:
       name: ${SPRING_SECURITY_USER_NAME}
       password: ${SPRING_SECURITY_USER_PASSWORD}
 
+  web:
+    resources:
+      add-mappings: false # 정적 리소스 매핑 비활성화
+
   devtools:
     restart:
       enabled: true

@@ -1,5 +1,6 @@
-package com.skeleton.api.skeleton_api.global.error;
+package com.keumbang.api.resource_server.global.common.response;
 
+import com.keumbang.api.resource_server.global.common.exception.ErrorCode;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
@@ -10,6 +11,10 @@ public class ErrorResponse {
     private final int statusCode;
     private final HttpStatus httpStatus;
     private final String message;
+
+    public ErrorResponse(ErrorCode errorCode) {
+        this(errorCode, errorCode.getMessage());
+    }
 
     public ErrorResponse(ErrorCode errorCode, String message) {
         this.errorCode = errorCode;

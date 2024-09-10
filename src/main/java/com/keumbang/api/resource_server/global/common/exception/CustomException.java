@@ -1,6 +1,5 @@
-package com.skeleton.api.skeleton_api.global.exception;
+package com.keumbang.api.resource_server.global.common.exception;
 
-import com.skeleton.api.skeleton_api.global.error.ErrorCode;
 import lombok.Getter;
 
 @Getter
