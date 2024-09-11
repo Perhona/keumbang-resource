@@ -1,8 +1,8 @@
 package com.keumbang.api.resource_server.domain.trade.entity;
 
+import com.keumbang.api.resource_server.domain.product.entity.Product;
 import com.keumbang.api.resource_server.domain.trade.enums.TradeStatus;
 import com.keumbang.api.resource_server.domain.trade.enums.TradeType;
-import com.keumbang.api.resource_server.domain.product.entity.Product;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
 import lombok.AllArgsConstructor;

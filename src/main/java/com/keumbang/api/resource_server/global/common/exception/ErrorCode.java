@@ -23,6 +23,8 @@ public enum ErrorCode {
     INVALID_REFRESH_TOKEN(UNAUTHORIZED, "refresh 토큰이 만료되었거나 유효하지 않습니다. 다시 로그인해주세요."),
     REFRESH_TOKEN_NOT_FOUND(UNAUTHORIZED, "refresh 토큰을 찾을 수 없습니다."),
 
+    // 상품
+    PRODUCT_NOT_FOUND(BAD_REQUEST, "상품을 찾을 수 없습니다."),
     ;
 
 
