@@ -29,8 +29,8 @@
 
 
 ```bash
-git clone https://github.com/your-username/keumbang_resource.git
-cd keumbang_resource
+git clone https://github.com/Perhona/keumbang-resource.git
+cd keumbang-resource
 ```
 
 ### 2. 프로젝트 환경 설정
@@ -44,7 +44,7 @@ cd keumbang_resource
 SPRING_PORT=port_number
 
 # 데이터베이스 설정
-SPRING_DATASOURCE_URL=jdbc:mariadb://localhost:3308/db_name
+SPRING_DATASOURCE_URL=jdbc:mariadb://localhost:port_number/db_name
 SPRING_DATASOURCE_USERNAME=db_username
 SPRING_DATASOURCE_PASSWORD=db_password
 
@@ -82,7 +82,7 @@ GRPC_AUTH_SERVER_ADDRESS=auth_server_ip:auth_server_port
   Swagger를 통해 API 스펙을 확인할 수 있습니다.
 
 
-- **Postman API 호출**: [Postman Collection](https://www.postman.com/collections/your-collection-id)  
+- **Postman API 호출**: [Postman Collection](https://web.postman.co/workspace/f6540017-ceef-4c8c-80be-b2986cacad7a/collection/20514647-59a15e4f-0476-4d9b-85a4-e303cbc3f4ec)  
   Postman 링크를 통해 API를 직접 호출하고 테스트할 수 있습니다.
 
 <br/>
