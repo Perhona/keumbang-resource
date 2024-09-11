@@ -17,24 +17,24 @@ import java.math.BigDecimal;
 @Getter
 @Schema(description = "주문 생성 요청 DTO")
 public class TradeRequestDto {
-    @NotNull
+    @NotNull(message = "사용자 ID는 필수 항목입니다.")
     @Schema(description = "사용자 ID", example = "1")
     private Long userId;
 
-    @NotNull
+    @NotNull(message = "상품 ID는 필수 항목입니다.")
     @Schema(description = "상품 ID", example = "101")
     private Long productId;
 
     @Digits(integer = 10, fraction = 2)
-    @NotNull
+    @NotNull(message = "주문 수량은 필수 항목입니다.")
     @Schema(description = "주문 수량 (그램 단위), 소수점 이하 2자리까지 가능", example = "250.00")
     private BigDecimal quantity;
 
-    @NotNull
+    @NotNull(message = "배송 주소는 필수 항목입니다.")
     @Schema(description = "배송 주소", example = "서울시 강남구 테헤란로 123")
     private String shippingAddress;
 
-    @NotNull
+    @NotNull(message = "주문 유형은 필수 항목입니다.")
     @Schema(description = "주문 유형", example = "PURCHASE")
     private TradeType type;
 }

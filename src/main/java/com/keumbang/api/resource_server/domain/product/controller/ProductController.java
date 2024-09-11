@@ -4,6 +4,9 @@ import com.keumbang.api.resource_server.domain.product.dto.ProductRequestDto;
 import com.keumbang.api.resource_server.domain.product.service.ProductService;
 import com.keumbang.api.resource_server.global.common.response.CommonResponse;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -28,6 +31,11 @@ public class ProductController {
      */
     @PostMapping
     @Operation(summary = "상품 등록", description = "새로운 상품을 등록합니다.")
+    @ApiResponse(
+            responseCode = "200"
+            , description = "상품 등록 성공"
+            , content = @Content(mediaType = "application/json", schema = @Schema(implementation = CommonResponse.class))
+    )
     public ResponseEntity<CommonResponse<Long>> registerProduct(@Valid @RequestBody ProductRequestDto productRequestDto) {
         return ResponseEntity.ok(CommonResponse.ok("상품 등록이 완료되었습니다.", productService.registerProduct(productRequestDto)));
     }
