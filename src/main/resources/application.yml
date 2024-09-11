@@ -32,11 +32,6 @@ spring:
         show_sql: false
         highlight_sql: true
 
-  security:
-    user:
-      name: ${SPRING_SECURITY_USER_NAME}
-      password: ${SPRING_SECURITY_USER_PASSWORD}
-
   web:
     resources:
       add-mappings: false # 정적 리소스 매핑 비활성화

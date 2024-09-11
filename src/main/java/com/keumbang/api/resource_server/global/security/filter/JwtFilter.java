@@ -31,7 +31,6 @@ public class JwtFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         // 허용된 URL인 경우, 필터 체인을 그대로 진행
         if (isPermittedUrl(request.getServletPath())) {
-            log.info("허용된 URL");
             filterChain.doFilter(request, response);
             return;
         }
