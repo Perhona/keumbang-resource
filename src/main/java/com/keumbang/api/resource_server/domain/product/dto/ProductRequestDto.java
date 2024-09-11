@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 @Getter
 @Schema(description = "상품 등록 요청 DTO")
 public class ProductRequestDto {
-    @NotEmpty
-    @Schema(description = "상품 타입", example = "G9999")
+    @NotNull
+    @Schema(description = "상품 타입", example = "GOLD_9999")
     private ProductType type;
 
     @NotEmpty
@@ -24,6 +24,6 @@ public class ProductRequestDto {
     private String description;
 
     @NotNull
-    @Schema(description = "그램(g)당 가격", example = "1500")
+    @Schema(description = "그램(g)당 가격", example = "100000")
     private Integer price; // 그램당 가격
 }
