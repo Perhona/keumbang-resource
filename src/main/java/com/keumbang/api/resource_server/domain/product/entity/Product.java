@@ -20,13 +20,13 @@ public class Product {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "type")
+    @Column(name = "type", nullable = false)
     private ProductType type;
 
     @Column(name = "description", length = 300)
     private String description;
 
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private Integer price;  // 그램(g)당 가격
 
 }
